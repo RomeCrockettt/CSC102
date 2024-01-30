@@ -20,9 +20,11 @@
         // Highly unpreferred method, throws errors in console
         // middleName = "Rome";
 
+        alert("All the values will be output to console, instead of using alerts!");
+
         var funVar;
         funVar = 5;
-        console.log(funVar);
+        console.log("funVar = " + funVar);
 
     </script>
 
@@ -35,19 +37,29 @@
         // Function names should usually be some sort of action
         // Alawys include the () - sometimes there be variable(s) in between the () or they may be empty
         // Always make sure there are a matching set of {}
-        function runCalc(){ // Donot mix ; and {}
+        function runCalc(){ // Do not mix ; and {}
             // Whatever code is inbetween the curly braces belongs to this function
             // We will create a variable called num1, and we will give it a default value of 0
             // JavaScript should assume this is a numeric datatype
             var num1 = 0;
             var num2 = 0;
 
-            // We want to promp the user for  anumer, using the built in JavaScript prompt function
+            // We want to prompt the user for a number, using the built in JavaScript prompt function
             // The prompt function takes an argument (variable) - the text that will be shown to the user with the prompt
             // The prompt function returns the value that the user entered in
             // Set the num1 variable equal to the value the user entered in
-            num1 = prompt("Please enter number 1:"); // Most lines of JavaScript need a ; at the end 
-            num2 = prompt("Please enter number 2:"); // Get another number from the user and assign it to the num2 variable
+
+            // do while loops will run at least 1 time, and then it can run as many times as needed. while loops may run 0 times
+            do{
+                // Make the user enter a number, this loop will run until a number is entered
+                num1 = prompt("Please enter number 1:"); // Most lines of JavaScript need a ; at the end 
+                // if isNotaNumber is true (they entered text) or the users enter a 0, the loop will keep running
+            } while (isNaN(num1) || num1 == 0); // Because the query comes after the curly braces, you need to use a semicolon at the end of the function
+            
+            do{
+                num2 = prompt("Please enter number 2:"); // Get another number from the user and assign it to the num2 variable
+            } while (isNaN(num2) || num2 == 0);
+            
 
             // Lets add num1 and num2 together and store that value in the total variable
             // The built in JavaScript function parseInt makes sure that JavaScript treats the num1 and num2 variables as integers
@@ -55,7 +67,7 @@
 
             // Call the built in JavaScript function called alert - this will show a message to the user
             // It should show our numbers and the total
-            alert("The total of " + num1 + " plus " + num2 + " is " + total);
+            console.log("The total of " + num1 + " plus " + num2 + " is " + total);
         }
 
         // We have created the function, now we need to call it so that the function code will run
@@ -69,9 +81,60 @@
     <h2>Decision Logic (if else)</h2>
 
     <script>
+        // Creating a variable called age with a default value of 5
+        // 1 equals sign is assignment, the variable on the left is assigned to the value on the right
+        // 2 equals signs are a boolean operator to check for equality
+        var age = 5;
+
+        // if statements test a value, if the test results in true, it runs it's block of code
+        if (age == 5){
+            // This code will run if the value of the age variable is 5
+            console.log("age = " + age);
+        }
+        
+        // else if statements will be check when the previous if statement was untrue
+        else if (age == 6){
+            // This code will run if the value of the age variable is 6
+            console.log("age = " + age);
+        }
+
+        // The else statement is a catch-all, it will run if none of the previous if/else if statements were true
+        // This code will run if the value of age was not 5 or 6
+        else { console.log("age was not 5 or 6") }
 
     </script>
 
-    <h2>Variables</h2>
+    <h2>Loops</h2>
+
+    <script>
+        // Loops run code repeatedly
+        // They are great for displaying data
+        // There are 2 basic types of loops: for loops and while loops
+
+        // for loops are generally used when you know how many times you want the code to run
+        // The first part of our for loop is a counter variable, an dwe are setting it to a default value of 0
+        // The second part is the condition that the loop will test for on each run, the code will run as long as this condition is true
+        // The third is incrementing the counter variable each time the loop runs, i++ is the same thing as  i = i + 1
+
+        for (var i = 0; i < 5; i++){
+            console.log("i = " + i);
+        }
+
+        // while loops are generally used when you do not know ho wmany times you want the code to run
+
+        // Counter variable, set to a default value of 0
+        var counter = 0;
+        // wihle loop will run until the counter is equal to 5
+        while(counter < 5){
+            // Display the value of counter in the console
+            console.log("counter = " + counter);
+
+            // Increase the value of counter by 1 every time the while loop runs
+            counter++;
+        }
+
+
+    </script>
+
 </body>
 </html>
