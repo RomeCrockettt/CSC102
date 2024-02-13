@@ -38,7 +38,7 @@ function playDiceGame(){
     // First we check if the dice are the same numbers
     // Then we check to see if they are even, by dividing a number by 2, and seeing if the remainder is 0
     // The modulus operator % performs a division operator, but only returns the remainder.
-    else if(die1 == die2 && die1 % 2 == 0){
+    else if(die1 == die2 || die1 % 2 == 0){
         document.getElementById("diceGameResult").innerHTML = "You won the dice game!";
     }
 
