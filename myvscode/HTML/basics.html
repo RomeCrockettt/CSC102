@@ -1,4 +1,3 @@
-<!-- Nathan Rome Crockett 2/17/24 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -203,6 +202,29 @@
             // Allow the form to submit to the server
             return true;
         }
+    </script>
+
+    <!-- Event Driven Programming Section -->
+    <h2>Event Driven Programming</h2>
+    <!-- Button Method 1 -->
+    <button id="button1">Click Me!</button>
+    <button id="button2", onclick="handlebutton2();">Click Me.</button>
+
+    <script>
+        // Create a shortcut to refer to the HTML button (button 1)
+        var button1 = document.getElementById("button1");
+
+        // This is our event handler; it is just a function that we set up to run when the button is clicked
+        function handlebutton1(event){
+            console.log("Button 1 was clicked!")
+        }
+
+        function handlebutton2(){
+            console.log("Button 2 was clicked!")
+        }
+
+        // Wire the button to listen for the event (when the button is clicked)
+        button1.addEventListener("click", handlebutton1);
     </script>
 
 </body>

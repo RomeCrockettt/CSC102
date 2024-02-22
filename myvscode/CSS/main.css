@@ -62,3 +62,12 @@ a{
     text-decoration: none;
     color:rgb(189, 82, 12);
 }
+
+/* A custom selector for the memeImage mover buttons, while not perfect it slightly aligns the buttons with the header text */
+#buttonDiv{
+    position: relative;
+    margin: 0;
+    top: 10%;
+    left: 40%;
+    width: 500px;
+}

@@ -1,4 +1,4 @@
-<!-- Nathan Rome Crockett 2/7/24 -->
+<!-- Nathan Rome Crockett 2/22/24 -->
 <!-- Tells the browser this is an HTML5 page -->
 <!DOCTYPE html> 
 <!-- Mandatory html opening tag -->
@@ -15,6 +15,9 @@
     <!-- This will link our CSS page to our HTML page; href is the name of the CSS file
          rel=stylesheet tells the borwser this is our style sheet -->
     <link href="../CSS/main.css" rel="stylesheet">
+
+    <!-- Link the JavaScript file to this page -->
+    <script src="../JS/imagemover.js"></script>
 </head>
 
 <!-- Everything we want to display to the user goes in the body section -->
@@ -32,6 +35,13 @@
     <!-- Add header text. There should be only 1 h1 tag on a page -->
     <h1>Welcome to my CSC102 home page.</h1>
 
+    <!-- This is the button that will start our image moving around -->
+    <!-- By encasing the buttons in a div, they can more easily be placed around the page -->
+    <div id="buttonDiv">
+    <button id="startMoveImage", onclick="startMoveImage();">Start Image Movement</button>
+    <button id="stopMoveImage", onclick="stopMoveImage();">Stop Image Movement</button>
+    </div>
+
     <!-- This is a paragraph, by default there will be spacing before and after the tag -->
     <p>
             <img id="memeImage" src="../images/memeImage.webp" alt="Awesome meme image">
@@ -44,6 +54,7 @@
         2625 W Baseline Rd. <br>
         Tempe, AZ 85283
     </footer>
+
     <!-- Ensure there is a body tag at the bottom of the file -->
 </body>
 <!-- Closing html tag should be at the end of every file -->
